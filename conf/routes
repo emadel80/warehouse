@@ -4,6 +4,11 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
+# Product Catalog pages
+GET	/products/		    controllers.ProductsController.list
+GET	/products/new		    controllers.ProductsController.newProduct
+GET	/products/:ean		    controllers.ProductsController.details(ean: String)
+POST	/products/		    controllers.ProductsController.save
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
